@@ -1,0 +1,36 @@
+.content{
+	background-color: rgb(253, 229, 229);
+}
+.ul_list{
+	text-decoration: none;
+	list-style: none;
+	display: block;
+	margin: 1px;
+	text-align: left;
+}
+*{margin:0;padding:0;}
+        
+div{
+	font-size:1.2em;
+	color:red; 
+	background-color: #dfdfdf; 
+	border: 0 solid #1892B5; 
+	padding: 0px
+	margin: 0px;
+}
+
+a:link,a:visited
+{
+	display:block;
+	color:#000000;
+	background-color:#dfdfdf;
+	width:200px;
+	text-align:left;
+	padding:4px;
+	text-decoration:none;
+}
+a:hover,a:active
+{
+	background-color:#dfdfdf;
+	font-weight:bold;
+}

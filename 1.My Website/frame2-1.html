@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/shtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>LeftMenu study</title>
+    <link rel="stylesheet" href="css/frame2-1.css">
+    </style>
+    <script type="text/javascript">
+        function on_click(){
+            window.parent.frames[2].location="frame3-1.html";
+        }
+       function show(parentid,childid){
+           var parent=document.getElementById(parentid);
+           var child=document.getElementById(childid);
+           if(child.style.display=="none"){
+                child.style.display="";
+               
+                if(parentid=="java_list"){
+                    parent.innerHTML="- java教程";
+                }else if(parentid=="cms_list"){
+                    parent.innerHTML="- cms教程";
+                }
+           }
+           else{
+               child.style.display="none";
+               if(parentid=="java_list"){
+                   parent.innerHTML="+ java教程";
+               }else if(parentid=="cms_list"){
+                   parent.innerHTML="+ cms教程";
+               }
+           }
+       }
+    </script>
+</head>
+<!--
+
+-->
+<body class="content">
+    <ul class="ul_list">
+        <div id="java_menu" style="color: rgb(188, 188, 241);" onclick="show('java_list','java_child')">
+        <li><a id="java_list" href="#">+ java教程</a></li>
+        </div>
+        <div id="java_child" style="display: none;">
+            <li><a href="#" onclick="on_click()">a</a></li>
+            <li><a href="#">b</a></li>
+            <li><a href="#">c</a></li>
+            <li><a href="#">d</a></li>
+        </div>
+    </ul>
+    <ul class="ul_list">
+        <div id="cms_menu" style="color: rgb(188, 188, 241);" onclick="show('cms_list','cms_child')">  
+        <li><a id="cms_list" href="#" >+ cms教程</a></li>
+        </div>  
+            <div id="cms_child" style="display: none;">
+                <li><a href="#">a</a></li>
+                <li><a href="#">b</a></li>
+                <li><a href="#">c</a></li>
+                <li><a href="#">d</a></li>
+            </div>
+        
+    </ul> 
+    <ul class="ul_list">
+        <div id="git_menu" style="color: rgb(188, 188, 241);" onclick="show('git_list','git_child')"></div>
+        <li><a id="git_list" href="#">+ git教程</a></li>
+        </div>
+        <div id="git_child" style="display: none;">
+            <li><a href="#" onclick="on_click()">a</a></li>
+            <li><a href="#">b</a></li>
+            <li><a href="#">c</a></li>
+            <li><a href="#">d</a></li>
+        </div>
+    </ul>
+    <ul class="ul_list">
+        <div id="js_menu" style="color: rgb(208, 208, 209);" onclick="show('js_list','js_child')"></div>
+        <li><a id="js_list" href="#">+ js教程</a></li>
+        </div>
+        <div id="js_child" style="display: none;">
+            <li><a href="#" onclick="on_click()">a</a></li> 
+            <li><a href="#">b</a></li>
+            <li><a href="#">c</a></li>
+            <li><a href="#">d</a></li>
+        </div>
+    </ul>
+    <ul class="ul_list">
+        <div id="mysql_menu" style="color: rgb(209, 209, 221);" onclick="show('mysql_list','mysql_child')"></div>
+        <li><a id="mysql_list" href="#">+ mysql教程</a></li>
+        </div>
+        <div id="mysql_child" style="display: none;">
+            <li><a href="#" onclick="on_click()">a</a></li>
+            <li><a href="#">b</a></li>
+            <li><a href="#">c</a></li>
+            <li><a href="#">d</a></li>
+        </div>
+    </ul>    
+</body>
+
+</html>
